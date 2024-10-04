@@ -1,0 +1,66 @@
+<odoo>
+    <record id="view_master_ruangan_tree" model="ir.ui.view">
+        <field name="name">ruangan.master.tree</field>
+        <field name="model">ruangan.master</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nama_ruangan"/>
+                <field name="tipe_ruangan"/>
+                <field name="lokasi_ruangan"/>
+                <field name="kapasitas_ruangan"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_master_ruangan_form" model="ir.ui.view">
+        <field name="name">ruangan.master.form</field>
+        <field name="model">ruangan.master</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="nama_ruangan"/>
+                    <field name="tipe_ruangan"/>
+                    <field name="lokasi_ruangan"/>
+                    <field name="foto_ruangan"/>
+                    <field name="kapasitas_ruangan"/>
+                    <field name="keterangan"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_pemesanan_ruangan_tree" model="ir.ui.view">
+        <field name="name">ruangan.pemesanan.tree</field>
+        <field name="model">ruangan.pemesanan</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nomor_pemesanan"/>
+                <field name="ruangan_id"/>
+                <field name="nama_pemesan"/>
+                <field name="tanggal_pemesanan"/>
+                <field name="status_pemesanan"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_pemesanan_ruangan_form" model="ir.ui.view">
+        <field name="name">ruangan.pemesanan.form</field>
+        <field name="model">ruangan.pemesanan</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="nomor_pemesanan" readonly="1"/>
+                    <field name="ruangan_id"/>
+                    <field name="nama_pemesan"/>
+                    <field name="tanggal_pemesanan"/>
+                    <field name="status_pemesanan"/>
+                    <field name="catatan_pemesanan"/>
+                </group>
+                <footer>
+                    <button name="action_set_ongoing" string="Proses Pemesanan" type="object" class="btn-primary"/>
+                    <button name="action_set_done" string="Selesaikan" type="object" class="btn-success"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

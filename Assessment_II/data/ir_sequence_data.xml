@@ -1,0 +1,10 @@
+<odoo>
+    <data noupdate="1">
+        <record id="sequence_ruangan_pemesanan" model="ir.sequence">
+            <field name="name">Pemesanan Ruangan</field>
+            <field name="code">ruangan.pemesanan</field>
+            <field name="prefix">BOOK</field>
+            <field name="padding">4</field>
+        </record>
+    </data>
+</odoo>
